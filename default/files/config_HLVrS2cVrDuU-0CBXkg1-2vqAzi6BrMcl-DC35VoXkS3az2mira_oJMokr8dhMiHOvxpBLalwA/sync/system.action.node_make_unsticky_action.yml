@@ -1,0 +1,13 @@
+uuid: 73214fc6-52da-4ef9-a39e-4b8074a4cd4b
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lDM9mvIGAu8Sw8rt-uCO4Sr7yX5VPrDPxYcawkbKd6k
+id: node_make_unsticky_action
+label: 'Remover destaque do conteúdo'
+type: node
+plugin: node_make_unsticky_action
+configuration: {  }

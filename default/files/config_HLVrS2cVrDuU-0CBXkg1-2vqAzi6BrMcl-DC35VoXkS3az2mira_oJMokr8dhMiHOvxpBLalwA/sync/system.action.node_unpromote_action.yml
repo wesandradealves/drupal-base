@@ -1,0 +1,13 @@
+uuid: be7f9186-8b6e-4ef7-aa81-338cfd14004d
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: JBptjnfuOMtsdKygklXxoOgeOCTMtQxlkymjnnj-cC0
+id: node_unpromote_action
+label: 'Remover conteúdo da página inicial'
+type: node
+plugin: node_unpromote_action
+configuration: {  }

@@ -1,0 +1,10 @@
+uuid: 5e0df5d2-e8b2-426a-bd17-454d8fae627e
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yoNVreoTdTZTY7GuE8fI9Jmxqdz8vlo4ZJKixMNSosw
+name: Tags
+vid: tags
+description: 'Use etiquetas para agrupar artigos sobre temas semelhantes em categorias.'
+weight: 0
