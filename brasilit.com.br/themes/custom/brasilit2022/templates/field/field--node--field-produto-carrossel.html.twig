@@ -1,0 +1,122 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+  <div{{ attributes.addClass(classes) }} style="width: 33%; float: left;">
+    {% if multiple %}
+      <div class='w3-content w3-display-container'>
+    {% endif %}
+    {% for item in items %}
+      
+      {{ item.content }}
+
+    {% endfor %}
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    {% if multiple %}
+      </div>
+    {% endif %}
+  </div>
+
+<script type="text/javascript">
+  // var images = document.getElementsByTagName("img");
+  // var i;
+
+  // for(i = 0; i < images.length; i++) {
+  //     images[i].className += " carrossel-imagens";
+  // }
+
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("carrossel-image");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+</script>
+
+
+{# <div class="w3-content w3-display-container" style="max-width:900px;">
+
+  <!-- Slideshow -->
+  <div class="w3-display-container mySlides w3-animate-opacity" style="display: none;">
+    <img src="/w3images/workbench.jpg" style="width:100%">
+    <div class="w3-display-middle w3-text-white w3-container w3-padding-32 w3-hide-small">
+      <span class="w3-white w3-padding-large">Caption text</span>
+    </div>
+  </div>
+  <div class="w3-display-container mySlides w3-animate-opacity" style="display: none;">
+    <img src="/w3images/coffee.jpg" style="width:100%">
+    <div class="w3-display-topleft w3-text-white w3-container w3-padding-32 w3-hide-small">
+      <span class="w3-white w3-padding-large">Caption text</span>
+    </div>
+  </div>
+  <div class="w3-display-container mySlides w3-animate-opacity" style="display: block;">
+    <img src="/w3images/sound.jpg" style="width:100%">
+    <div class="w3-display-topright w3-text-white w3-container w3-padding-32 w3-hide-small">
+      <span class="w3-white w3-padding-large">Caption text</span>
+    </div>
+  </div>
+<button class="w3-button w3-light-grey noselection w3-display-left" onclick="plusDivs(-1)">❮</button>
+<button class="w3-button w3-light-grey noselection w3-display-right" onclick="plusDivs(+1)">❯</button>
+</div> #}

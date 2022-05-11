@@ -1,0 +1,8 @@
+uuid: 63acd60d-fe62-4e4f-95c2-c4921ad127ff
+langcode: en
+status: true
+dependencies: {  }
+id: alert_block
+label: 'Alert Block'
+revision: 0
+description: 'Block used for alert bar information'

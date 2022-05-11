@@ -1,0 +1,38 @@
+uuid: aac7b465-b357-47d0-9621-6863e952b1dd
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_background_desktop_image
+    - node.type.banner
+  module:
+    - image
+id: node.banner.field_background_desktop_image
+field_name: field_background_desktop_image
+entity_type: node
+bundle: banner
+label: 'Background Desktop Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: 'Não há imagem disponível'
+    title: ''
+    width: null
+    height: null
+field_type: image

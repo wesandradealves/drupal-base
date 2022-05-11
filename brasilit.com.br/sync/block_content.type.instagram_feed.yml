@@ -1,0 +1,8 @@
+uuid: 8a0ae6c1-0753-457f-8d27-89ce6571f5c3
+langcode: en
+status: true
+dependencies: {  }
+id: instagram_feed
+label: 'Instagram Feed'
+revision: 0
+description: 'Simple instagram render block'

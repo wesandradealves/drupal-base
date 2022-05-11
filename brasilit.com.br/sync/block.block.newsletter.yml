@@ -1,0 +1,25 @@
+uuid: 54387231-a670-4717-97b1-0b9cda25569a
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:newsletter:ff0e9f36-8973-47ba-9bc9-4a5d43aa1aef'
+  module:
+    - block_content
+  theme:
+    - brasilit2022
+id: newsletter
+theme: brasilit2022
+region: newsletter
+weight: -14
+provider: null
+plugin: 'block_content:ff0e9f36-8973-47ba-9bc9-4a5d43aa1aef'
+settings:
+  id: 'block_content:ff0e9f36-8973-47ba-9bc9-4a5d43aa1aef'
+  label: Newsletter
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

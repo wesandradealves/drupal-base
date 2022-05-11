@@ -1,0 +1,20 @@
+    {#
+    /**
+     * @file
+     * Theme override for a 'form' element.
+     *
+     * Available variables:
+     * - attributes: A list of HTML attributes for the wrapper element.
+     * - children: The child elements of the form.
+     *
+     * @see template_preprocess_form()
+     */
+    #}
+    <form{{ attributes.addClass('d-flex align-items-stretch justify-content-end col-12 ps-lg-3 rounded-1 inline-form search-form w-100', 'search-block-form') }}>
+        <button class="d-flex align-items-center justify-content-center inline-form--button" onclick="console.log(this)">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <div class="d-none d-lg-flex flex-grow-1">
+            {{ children }}
+        </div>
+    </form>

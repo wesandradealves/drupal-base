@@ -1,0 +1,21 @@
+uuid: fee2c218-7c9f-4285-98ce-05ca0867c1ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_footer_info_icon
+field_name: field_footer_info_icon
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

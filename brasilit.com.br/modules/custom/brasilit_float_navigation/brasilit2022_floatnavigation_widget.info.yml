@@ -1,0 +1,5 @@
+name: 'Brasilit Float Navigation'
+type: module
+description: 'Custom module for Brasilit Float Navigation'
+core_version_requirement: ^8.8 || ^9
+package: BRASILIT

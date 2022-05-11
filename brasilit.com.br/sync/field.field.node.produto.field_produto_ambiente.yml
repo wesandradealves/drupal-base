@@ -1,0 +1,21 @@
+uuid: cfb0b75e-9347-4731-91f4-7edcac2ec09e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produto_ambiente
+    - node.type.produto
+  module:
+    - options
+id: node.produto.field_produto_ambiente
+field_name: field_produto_ambiente
+entity_type: node
+bundle: produto
+label: Ambiente
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

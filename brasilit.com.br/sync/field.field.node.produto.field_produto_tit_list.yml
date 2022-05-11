@@ -1,0 +1,19 @@
+uuid: 79fbcb61-7839-4eb5-90e1-d25584e6e5d8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produto_tit_list
+    - node.type.produto
+id: node.produto.field_produto_tit_list
+field_name: field_produto_tit_list
+entity_type: node
+bundle: produto
+label: 'Título (Listagens)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

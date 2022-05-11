@@ -1,0 +1,22 @@
+name: Brasilit 2022
+type: theme
+description: 'Brasilit 2022 - Barrio SubTheme.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: bootstrap_barrio
+
+libraries:
+  - brasilit2022/bootstrap_cdn
+  - brasilit2022/global-styling
+
+regions:
+  top_header: 'Top header'
+  header_search: 'Header Search'
+  primary_navigation: 'Primary Navigation'
+  footer_navigation: 'Footer Navigation'
+  home: Home
+  home_banner_cards: Banner Cards
+  content: Content
+  footer_section: 'Footer Section'
+  newsletter: 'Footer - Newsletter'
+  footer_right: 'Footer Right Side Content'

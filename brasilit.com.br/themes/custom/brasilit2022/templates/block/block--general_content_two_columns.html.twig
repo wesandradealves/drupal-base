@@ -1,0 +1,100 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main content
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% block content %}
+
+{%
+  set classes = [
+    content.field_custom_classes.0['#context'].value,
+    'general-block-two-columns',
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+{% set field_general_content_title = content.field_general_content_title|render %}
+{% set field_general_content_text = content.field_general_content_text|render %}
+{% set field_read_more = content.field_read_more|render %}
+{% set field_general_content_image = content.field_general_content_image|render %}
+{% set field_general_content_image_mobi = content.field_general_content_image_mobi|render %}
+{% set field_custom_form = content.field_custom_form|render %}
+
+<section{{ attributes.addClass(classes) }}>
+    <div class="d-flex flex-column flex-lg-row {% if content.field_reverse_row.0['#markup'] == 'On' %} flex-lg-row-reverse {% endif %} align-items-stretch justify-content-between container pe-0 ps-0 pb-lg-0">
+        {% if field_custom_form or field_general_content_title or field_general_content_text or field_read_more %}
+        <div class="col-12 text-center text-lg-start order-2 order-lg-1 col-lg-6 pe-md-5 pt-5 pb-5 pe-5 ps-5 ps-lg-0 d-flex align-items-center align-items-lg-start justify-content-center flex-column">
+            {% if field_general_content_title %}<h3 class="mb-4 section-title">{{field_general_content_title}}</h3>{%endif%}
+            {% if content.body[0] %}<p class="col-12 col-lg-8">{{content.body[0]}}</p>{%endif%}
+            
+            {% if field_custom_form %}
+                <div class="mt-4">
+                    {{ content.field_custom_form }}
+                </div>
+            {% endif %}
+            
+            {% if field_read_more %}
+                <a href="{{ content.field_read_more.0['#link'] }}" class="rounded-2 mt-4 col-6 col-md-3 btn --default" title="{{content.field_read_more.0['#title']}}">{{content.field_read_more.0['#title']}}</a>
+            {%endif%}
+        </div>
+        {% endif %}
+
+        {% if field_general_content_image or field_general_content_image_mobi %}
+            {% set default_url = file_url(content.field_general_content_image.0['#item'].entity.uri.value) %}
+            {% set mobile_url = file_url(content.field_general_content_image_mobi.0['#item'].entity.uri.value) %}
+
+            <div class="col-12 order-1 order-lg-2 col-lg-6 pt-4 p-lg-0 d-flex flex-column align-items-center justify-content-center ">
+                <picture class="position-lg-absolute h-lg-100 bottom-lg-0 right-lg-0 d-flex flex-column justify-content-center align-items-center justify-content-lg-{{content.field_image_position.0['#context'].value}} align-items-lg-{{content.field_image_position.0['#context'].value}} col-12">
+                    <source media="(min-width:980px)" srcset="{{ default_url }}">
+                    <img class="d-block h-lg-100 w-auto" src="{{ mobile_url }}">
+                </picture>    
+            </div>  
+        {% endif %}
+    </div>
+</section>
+{% endblock %}    
+
+{#{{ drupal_region('contact_form') }}#}
+
+<style>
+    .general-block-two-columns [class*="row-reverse"] > *:first-child {
+        padding-right: 3rem !important;
+    }
+    @media screen and (min-width: 992px) {
+        .general-block-two-columns [class*="row-reverse"] > *:first-child {
+            padding-right: 0 !important;
+            padding-left: 3rem !important;
+        }
+    }
+</style>
+
+                    

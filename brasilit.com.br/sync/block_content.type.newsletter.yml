@@ -1,0 +1,8 @@
+uuid: 506fea15-71e9-4ec3-8934-e974bae2caaa
+langcode: en
+status: true
+dependencies: {  }
+id: newsletter
+label: Newsletter
+revision: 0
+description: 'Block to be used with the newsletter template'

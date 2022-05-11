@@ -1,0 +1,19 @@
+uuid: 15ccccc4-7ea7-488e-96aa-8c3c4b905fec
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descritivo
+    - node.type.produto
+id: node.produto.field_descritivo
+field_name: field_descritivo
+entity_type: node
+bundle: produto
+label: 'Descritivo de Produto Curto (Listagens)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

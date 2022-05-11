@@ -1,0 +1,11 @@
+uuid: c37f188b-d103-40c4-b648-4c0630e3f4bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.coloured_cards
+id: node.coloured_cards
+target_entity_type_id: node
+target_bundle: coloured_cards
+default_langcode: site_default
+language_alterable: false

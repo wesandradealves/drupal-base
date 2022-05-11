@@ -1,0 +1,19 @@
+uuid: 0fb0e95a-ef91-45cc-ac11-3ef778075f6d
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_produto_bim
+field_name: field_produto_bim
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

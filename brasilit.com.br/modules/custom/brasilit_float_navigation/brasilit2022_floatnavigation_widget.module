@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Contains brasilit2022_floatnavigation_widget.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function brasilit2022_floatnavigation_widget_theme($existing, $type, $theme, $path)
+{
+  return [
+    // Form newsletter
+    'brasilit2022_floatnavigation_widget_widget_block' => [
+      'render element' => 'children',
+      'template' => 'widget-block',
+      'path' => $path . '/templates',
+      'variables' => [
+        'variable' => NULL
+      ],
+    ],
+  ];
+}

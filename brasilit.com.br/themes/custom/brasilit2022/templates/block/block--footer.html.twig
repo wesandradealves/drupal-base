@@ -1,0 +1,47 @@
+<!-- Footer -->
+<footer id="footer" class="overflow-hidden">
+
+    {{ drupal_region('newsletter') }}
+
+    <div class="footer-bottom">
+        <div class="container d-flex flex-column pb-5 flex-lg-row">
+            <div class="flex-fill mb-4 mb-lg-0">
+            <h2 class="mb-3">Produtos</h2>
+            {{ drupal_region('footer_navigation') }}
+
+            <nav class="d-flex flex-wrap flex-md-row">
+                <div class="d-lg-none">
+                    <h2 class="mb-3">Institucional</h2>
+                    {{ drupal_region('primary_navigation') }}
+                </div>
+            </nav>
+            </div>
+            <div class="col-2 mb-4 mb-lg-0 d-none d-lg-block">
+                <h2 class="mb-3">Institucional</h2>
+                <nav class="pe-2 mb-2">
+                    {{ drupal_region('primary_navigation') }}
+                </nav>
+            </div>
+            <div class="col-12 col-lg-5 text-center ps-xs-0 ps-lg-4 text-lg-start">
+                {{ drupal_region('footer_right') }}
+                
+                {% if secondarylogo_url or logo %}
+                <ul class="d-flex align-items-center justify-content-center justify-content-lg-start footer-logos">
+                    {% if secondarylogo_url %}
+                        <li class="me-4">
+                            <img src="{{ secondarylogo_url }}" />
+                        </li>  
+                    {% endif %}      
+                    {% if logo %}      
+                        <li class="me-4">
+                            <a href="{{ path('<front>') }}" title="{{site_name}} {% if site_slogan %} - {{site_slogan}} {% endif %}" rel="home">
+                                <img src="{{ logo }}" alt="{{site_name}}" />
+                            </a>
+                        </li>
+                    {% endif %} 
+                </ul>   
+                {% endif %}                             
+            </div>
+        </div>
+    </div>
+</footer>

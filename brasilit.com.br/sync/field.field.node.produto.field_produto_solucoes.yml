@@ -1,0 +1,29 @@
+uuid: e970f475-2c57-43a3-91ae-50fff811f10c
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produto_solucoes
+    - node.type.produto
+    - taxonomy.vocabulary.produto_solucoes
+id: node.produto.field_produto_solucoes
+field_name: field_produto_solucoes
+entity_type: node
+bundle: produto
+label: Soluções
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      produto_solucoes: produto_solucoes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

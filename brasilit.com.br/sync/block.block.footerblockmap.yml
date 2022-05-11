@@ -1,0 +1,25 @@
+uuid: 07378dd2-e093-4dfb-ab01-87b035e03d1f
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_info:f29a3e15-fe77-4b07-a142-6dd761d6a59d'
+  module:
+    - block_content
+  theme:
+    - brasilit2022
+id: footerblockmap
+theme: brasilit2022
+region: footer_right
+weight: -7
+provider: null
+plugin: 'block_content:f29a3e15-fe77-4b07-a142-6dd761d6a59d'
+settings:
+  id: 'block_content:f29a3e15-fe77-4b07-a142-6dd761d6a59d'
+  label: 'Footer Block - Map'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

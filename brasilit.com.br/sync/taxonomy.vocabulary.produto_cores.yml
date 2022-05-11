@@ -1,0 +1,8 @@
+uuid: 23dd8574-d437-44b2-a289-cef0c92d7526
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Produto - Cores'
+vid: produto_cores
+description: ''
+weight: 0

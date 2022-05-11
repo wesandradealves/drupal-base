@@ -1,0 +1,25 @@
+uuid: 267421d0-15b0-4932-8593-ad4fb3ed2b7c
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_info:528b3ad3-d1d7-4e21-84fd-f307d41df688'
+  module:
+    - block_content
+  theme:
+    - brasilit2022
+id: footerblockmail
+theme: brasilit2022
+region: footer_right
+weight: -6
+provider: null
+plugin: 'block_content:528b3ad3-d1d7-4e21-84fd-f307d41df688'
+settings:
+  id: 'block_content:528b3ad3-d1d7-4e21-84fd-f307d41df688'
+  label: 'Footer Block - Mail'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

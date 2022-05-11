@@ -1,0 +1,56 @@
+uuid: 10d261f9-8c35-40b8-a405-38d98a1d382f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.instagram_feed
+    - field.field.block_content.instagram_feed.field_instagram_access_token
+    - field.field.block_content.instagram_feed.field_instagram_content
+    - field.field.block_content.instagram_feed.field_instagram_profile
+  module:
+    - text
+id: block_content.instagram_feed.default
+targetEntityType: block_content
+bundle: instagram_feed
+mode: default
+content:
+  field_instagram_access_token:
+    type: string_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_instagram_content:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_instagram_profile:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

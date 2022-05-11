@@ -1,0 +1,25 @@
+uuid: cbdb20fe-7c70-45cf-a6a1-0b537fcff7fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - brasilit2022_floatnavigation_widget
+    - system
+  theme:
+    - brasilit2022
+id: floatingnavigationblock
+theme: brasilit2022
+region: home
+weight: -6
+provider: null
+plugin: brasilit2022_floatnavigation_widget_widget_block
+settings:
+  id: brasilit2022_floatnavigation_widget_widget_block
+  label: 'Floating Navigation Block'
+  provider: brasilit2022_floatnavigation_widget
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

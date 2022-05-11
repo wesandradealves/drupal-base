@@ -1,0 +1,11 @@
+uuid: d021ecd4-1a76-4ed3-a569-42e486bc645a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.produto_linha
+id: taxonomy_term.produto_linha
+target_entity_type_id: taxonomy_term
+target_bundle: produto_linha
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,196 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+
+#view-produto .views-col {
+    padding: 10px;
+}
+
+#view-produto h3 {
+    font-family: 'Weber';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ED2024;
+    margin-top: 20px;
+}
+
+#view-produto .description {
+    font-family: 'Weber';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #424242;
+}
+
+#view-produto hr {
+    color: rgba(0, 0, 0, 0.4);
+    margin: 20px 0;
+}
+
+/*#view-produto .btn .btn-block .btn-produtos-lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 98px;
+    position: absolute;
+    width: 100%;
+    height: 47px;
+    left: 547px;
+    top: 975px;
+    background-color: #ED2024;
+    border-radius: 0px 0px 5px 5px;
+}*/
+
+
+#view-produto .btn-produtos-lista {
+    display: inline-block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: #ED2024;
+    background: #ED2024;
+    border: 1px solid #ED2024;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.page-view-produtos-list .pagination {
+    background-color: #EFEFEF;
+    float: right;
+    color: #707070;
+    border: 0;
+}
+
+.page-view-produtos-list .pagination .page-link span {
+    color: #707070;
+    background-color: #EFEFEF;
+}
+
+.page-view-produtos-list .pagination .page-item .page-link {
+    color: #707070;
+    background-color: #EFEFEF;
+    border: 0;
+}
+
+.page-view-produtos-list .pagination .pager__item--next .page-link {
+    color: #707070;
+    background-color: #EFEFEF;
+    border: 0;
+}
+
+.page-view-produtos-list .pagination .pager__item--previous .page-link {
+    color: #707070;
+    background-color: #EFEFEF;
+    border: 0;
+}
+
+.page-view-produtos-list .pagination .page-item.active .page-link {
+    color: #FFFFFF;
+    background-color: #ED2024;
+    border-radius: 50%;
+    border: 0;
+}
+
+
+/* PRODUTOS-DETALHES  */
+
+#produto-detalhes {
+    margin-top: 30px;
+}
+
+#produto-detalhes h2 {
+    color: #ED2024;
+    font-family: Weber;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#produto-detalhes hr {
+    color: #ED2024;
+    width: 36px;
+    height: 4px;
+    margin-top: 0;
+    opacity: 1;
+}
+/* /PRODUTOS-DETALHES  */
+
+.carrossel-image {
+    max-width: 455px;
+    max-height: 300px;
+}
+
+.w3-display-container{position:relative}
+.w3-display-container:hover .w3-display-hover{display:block}.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}
+.w3-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.w3-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+
+.field--name-field-produto-beneficios-texto .field__label {
+    font-family: 'Weber';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ED2024;
+    margin-bottom: 30px;
+}
+
+.node--type-produto 
+
+.field--name-field-produto-tit-list .field__item {
+    font-family: 'Weber';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #ED2024;
+    margin-top: 20px;
+}
+
+.field--name-field-produto-tit-list hr {
+    color: #ED2024;
+    width: 36px;
+    height: 4px;
+    margin-top: 0;
+    opacity: 1;
+}
+
+#imagem-beneficios {
+    margin-top: 60px;
+}
+
+#produto-abas-detalhes {
+    margin-top: 30px;
+    border: 0;
+}
+
+.produtos-tab-bar {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid #666666;
+}
+
+.produtos-tab-bar button {
+    margin: 0 30px;
+}
+
+
+

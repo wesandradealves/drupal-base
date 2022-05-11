@@ -1,0 +1,29 @@
+uuid: 747d1972-8e8e-4ee6-8b0e-173a018d0e9e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produto_categoria
+    - node.type.produto
+    - taxonomy.vocabulary.produto_categoria
+id: node.produto.field_produto_categoria
+field_name: field_produto_categoria
+entity_type: node
+bundle: produto
+label: Categoria
+description: 'Sempre marcar: categoria-pai (Nome) e categoria-filho (Linha).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      produto_categoria: produto_categoria
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

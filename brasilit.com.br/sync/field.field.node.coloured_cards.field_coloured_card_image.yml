@@ -1,0 +1,38 @@
+uuid: f835b612-347a-4b67-8257-01c1cb853f43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coloured_card_image
+    - node.type.coloured_cards
+  module:
+    - image
+id: node.coloured_cards.field_coloured_card_image
+field_name: field_coloured_card_image
+entity_type: node
+bundle: coloured_cards
+label: 'Coloured Card Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

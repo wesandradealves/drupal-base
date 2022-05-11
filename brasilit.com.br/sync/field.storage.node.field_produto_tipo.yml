@@ -1,0 +1,51 @@
+uuid: 961d75be-17c4-4122-92ee-92ad5cad47bf
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_produto_tipo
+field_name: field_produto_tipo
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: aparente
+      label: Aparente
+    -
+      value: embutido
+      label: Embutido
+    -
+      value: casas
+      label: Casas
+    -
+      value: edificios
+      label: Edifícios
+    -
+      value: garagem
+      label: Garagem
+    -
+      value: mezaninos
+      label: Mezaninos
+    -
+      value: revestimentos
+      label: Revestimentos
+    -
+      value: shafts
+      label: Shafts
+    -
+      value: fachada
+      label: Fachada
+    -
+      value: tapume
+      label: 'Tapume/Canteiro de Obras'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

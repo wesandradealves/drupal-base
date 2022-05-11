@@ -1,0 +1,21 @@
+uuid: c418f170-d810-43fe-a8a2-51122d080b62
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.general_content_two_columns
+    - field.storage.block_content.field_image_position
+id: block_content.general_content_two_columns.field_image_position
+field_name: field_image_position
+entity_type: block_content
+bundle: general_content_two_columns
+label: 'Image Position'
+description: 'Insert values such as: "end", "start" or "center".'
+required: false
+translatable: false
+default_value:
+  -
+    value: end
+default_value_callback: ''
+settings: {  }
+field_type: string

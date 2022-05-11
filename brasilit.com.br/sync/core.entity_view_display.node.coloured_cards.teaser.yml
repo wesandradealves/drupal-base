@@ -1,0 +1,28 @@
+uuid: bc42e27c-0523-4d47-8c94-bcef4ad46f16
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.coloured_cards.field_coloured_card_background
+    - field.field.node.coloured_cards.field_coloured_card_image
+    - field.field.node.coloured_cards.field_coloured_card_url
+    - node.type.coloured_cards
+  module:
+    - user
+id: node.coloured_cards.teaser
+targetEntityType: node
+bundle: coloured_cards
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_coloured_card_background: true
+  field_coloured_card_image: true
+  field_coloured_card_url: true
+  langcode: true
+  search_api_excerpt: true

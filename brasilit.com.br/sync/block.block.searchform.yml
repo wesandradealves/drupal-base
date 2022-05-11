@@ -1,0 +1,21 @@
+uuid: b50e21fa-731a-4d3d-ba68-1cf4ac4f1f19
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - brasilit2022
+id: searchform
+theme: brasilit2022
+region: header_search
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 6bfa04ab-19c2-4442-98fa-d49d9d1d2fb9
+langcode: en
+status: true
+dependencies: {  }
+id: footer_info
+label: 'Footer Info'
+revision: 0
+description: 'Block for footer info items'

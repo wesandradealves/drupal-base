@@ -1,0 +1,8 @@
+uuid: 0afda1d6-cafc-4970-94a7-719091be1556
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Blog - Categorias'
+vid: blog_categorias
+description: ''
+weight: 0

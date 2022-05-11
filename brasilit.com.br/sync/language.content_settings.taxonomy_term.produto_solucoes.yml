@@ -1,0 +1,11 @@
+uuid: e201026d-fefa-4734-a8e9-c322657d78c8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.produto_solucoes
+id: taxonomy_term.produto_solucoes
+target_entity_type_id: taxonomy_term
+target_bundle: produto_solucoes
+default_langcode: site_default
+language_alterable: true

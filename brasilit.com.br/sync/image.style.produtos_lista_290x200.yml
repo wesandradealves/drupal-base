@@ -1,0 +1,15 @@
+uuid: 8635255f-76d5-411a-9b9f-8badcfc62034
+langcode: pt-br
+status: true
+dependencies: {  }
+name: produtos_lista_290x200
+label: 'Produtos Lista 290x200'
+effects:
+  dd3672f5-0d5e-4aae-a4bc-60064270c54f:
+    uuid: dd3672f5-0d5e-4aae-a4bc-60064270c54f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 290
+      height: 200
+      anchor: center-center

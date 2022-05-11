@@ -1,0 +1,25 @@
+uuid: 8f0db91d-5abe-43bb-a72a-a9984c796d39
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b3770c45-3539-431d-9e8b-ff466dce9755'
+  module:
+    - block_content
+  theme:
+    - brasilit2022
+id: header
+theme: brasilit2022
+region: top_header
+weight: -9
+provider: null
+plugin: 'block_content:b3770c45-3539-431d-9e8b-ff466dce9755'
+settings:
+  id: 'block_content:b3770c45-3539-431d-9e8b-ff466dce9755'
+  label: Header
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

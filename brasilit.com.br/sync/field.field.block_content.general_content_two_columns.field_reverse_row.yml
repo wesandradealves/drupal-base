@@ -1,0 +1,23 @@
+uuid: 7e1f7121-b7a5-4ba5-8c5a-5b455a6f4bfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.general_content_two_columns
+    - field.storage.block_content.field_reverse_row
+id: block_content.general_content_two_columns.field_reverse_row
+field_name: field_reverse_row
+entity_type: block_content
+bundle: general_content_two_columns
+label: 'Reverse Row'
+description: 'Reverse order of the columns '
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,25 @@
+uuid: c02a56fb-15be-451b-b497-019405b397f1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produto_videos
+    - node.type.produto
+  module:
+    - video_embed_field
+id: node.produto.field_produto_videos
+field_name: field_produto_videos
+entity_type: node
+bundle: produto
+label: 'Vídeos (Como Instalar)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    youtube: '0'
+    youtube_playlist: '0'
+    vimeo: '0'
+field_type: video_embed_field

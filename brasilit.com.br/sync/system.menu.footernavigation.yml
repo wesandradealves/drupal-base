@@ -1,0 +1,8 @@
+uuid: 777565d0-49b2-4489-a4ad-3629fff06848
+langcode: pt-br
+status: true
+dependencies: {  }
+id: footernavigation
+label: 'Footer Navigation'
+description: ''
+locked: false

@@ -1,0 +1,21 @@
+uuid: e4f3abd3-b2e8-4eb1-84e2-3e20ddd70ac9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produto_junta
+    - node.type.produto
+  module:
+    - options
+id: node.produto.field_produto_junta
+field_name: field_produto_junta
+entity_type: node
+bundle: produto
+label: Junta
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

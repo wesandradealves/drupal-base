@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Default theme implementation for horizontal tabs.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The rendered children.
+ *
+ * @see template_preprocess_horizontal_tabs()
+ *
+ * @ingroup themeable
+ */
+#}
+<div data-horizontal-tabs class="horizontal-tabs clearfix" id="produto-abas-detalhes">
+  
+  <div class="produtos-tab-bar">
+    <button class="w3-bar-item w3-button" onclick="openCity('produto-caracteristicas')">Descrição</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Características Técnicas</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Medidas</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('produto-downloads')">Arquivos</button>
+  </div>
+
+  <ul data-horizontal-tabs-list class="horizontal-tabs-list visually-hidden"></ul>
+  <div data-horizontal-tabs-panes{{ attributes }}>{{ children }}</div>
+</div>
+
+<script>
+  function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("tabitems");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+  }
+
+  openCity('produto-caracteristicas');
+</script>

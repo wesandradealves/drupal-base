@@ -1,0 +1,11 @@
+uuid: b56129fd-af21-42f0-a5b8-0133e5adf5a4
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.produto
+id: node.produto
+target_entity_type_id: node
+target_bundle: produto
+default_langcode: site_default
+language_alterable: true

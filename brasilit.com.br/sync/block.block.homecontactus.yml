@@ -1,0 +1,25 @@
+uuid: 3afcf637-a7c5-4d9d-aab2-b39695256a6e
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:general_content_two_columns:998ff42c-7325-4666-8aca-f5046722774a'
+  module:
+    - block_content
+  theme:
+    - brasilit2022
+id: homecontactus
+theme: brasilit2022
+region: home
+weight: -2
+provider: null
+plugin: 'block_content:998ff42c-7325-4666-8aca-f5046722774a'
+settings:
+  id: 'block_content:998ff42c-7325-4666-8aca-f5046722774a'
+  label: 'Home - Contact Us'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

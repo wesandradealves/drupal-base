@@ -1,0 +1,21 @@
+uuid: e7c38794-51dc-41f3-8367-da27c8b47f6f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_info
+    - field.storage.block_content.field_footer_info_content
+  module:
+    - text
+id: block_content.footer_info.field_footer_info_content
+field_name: field_footer_info_content
+entity_type: block_content
+bundle: footer_info
+label: 'Footer Info Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

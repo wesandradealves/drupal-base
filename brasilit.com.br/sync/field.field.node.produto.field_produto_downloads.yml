@@ -1,0 +1,27 @@
+uuid: be1afbc4-a18e-4880-83ea-e31f4425405e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produto_downloads
+    - node.type.produto
+  module:
+    - file
+id: node.produto.field_produto_downloads
+field_name: field_produto_downloads
+entity_type: node
+bundle: produto
+label: Downloads
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'downloads/[current-page:page-number]'
+  file_extensions: 'pdf doc xls xlsx docx txt'
+  max_filesize: 10MB
+  description_field: true
+field_type: file

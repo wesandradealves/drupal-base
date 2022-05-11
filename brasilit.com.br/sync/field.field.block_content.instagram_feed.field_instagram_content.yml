@@ -1,0 +1,21 @@
+uuid: c9857104-9e12-43c3-af76-a685f8bdb826
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.instagram_feed
+    - field.storage.block_content.field_instagram_content
+  module:
+    - text
+id: block_content.instagram_feed.field_instagram_content
+field_name: field_instagram_content
+entity_type: block_content
+bundle: instagram_feed
+label: 'Instagram Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,25 @@
+uuid: 795f2a2a-10f3-4aff-a957-2f90a3d51f20
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - system.menu.social
+  module:
+    - system
+  theme:
+    - brasilit2022
+id: social
+theme: brasilit2022
+region: footer_right
+weight: -5
+provider: null
+plugin: 'system_menu_block:social'
+settings:
+  id: 'system_menu_block:social'
+  label: Social
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 487df16b-6356-48ce-a937-b43a2da64af6
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:general_content_two_columns:bedf5006-8cf6-4732-99c7-d55e2e6879bf'
+  module:
+    - block_content
+  theme:
+    - brasilit2022
+id: homeaboutus
+theme: brasilit2022
+region: home
+weight: -4
+provider: null
+plugin: 'block_content:bedf5006-8cf6-4732-99c7-d55e2e6879bf'
+settings:
+  id: 'block_content:bedf5006-8cf6-4732-99c7-d55e2e6879bf'
+  label: 'Home - About Us'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

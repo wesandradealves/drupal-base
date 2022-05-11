@@ -1,0 +1,19 @@
+uuid: f67b2d88-51a3-4497-a098-72c9f575374c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.instagram_feed
+    - field.storage.block_content.field_instagram_access_token
+id: block_content.instagram_feed.field_instagram_access_token
+field_name: field_instagram_access_token
+entity_type: block_content
+bundle: instagram_feed
+label: 'Instagram Access Token'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

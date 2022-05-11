@@ -1,0 +1,21 @@
+uuid: b74dcea2-1daf-44be-acb2-028b18076990
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produto_preco
+    - node.type.produto
+  module:
+    - options
+id: node.produto.field_produto_preco
+field_name: field_produto_preco
+entity_type: node
+bundle: produto
+label: Preço
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

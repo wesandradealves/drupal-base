@@ -1,0 +1,359 @@
+uuid: 406ad7e9-58be-4299-ab2d-09db12b0fe05
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.produto.body
+    - field.field.node.produto.field_complemento_produtos
+    - field.field.node.produto.field_descritivo
+    - field.field.node.produto.field_image
+    - field.field.node.produto.field_linha
+    - field.field.node.produto.field_produto_ambiente
+    - field.field.node.produto.field_produto_beneficios
+    - field.field.node.produto.field_produto_beneficios_texto
+    - field.field.node.produto.field_produto_bim
+    - field.field.node.produto.field_produto_caracteristicas
+    - field.field.node.produto.field_produto_carrossel
+    - field.field.node.produto.field_produto_categoria
+    - field.field.node.produto.field_produto_cores
+    - field.field.node.produto.field_produto_downloads
+    - field.field.node.produto.field_produto_junta
+    - field.field.node.produto.field_produto_preco
+    - field.field.node.produto.field_produto_selo
+    - field.field.node.produto.field_produto_showcores
+    - field.field.node.produto.field_produto_solucoes
+    - field.field.node.produto.field_produto_tipo
+    - field.field.node.produto.field_produto_tit_list
+    - field.field.node.produto.field_produto_videos
+    - image.style.thumbnail
+    - node.type.produto
+  module:
+    - field_group
+    - file
+    - image
+    - link
+    - path
+    - text
+    - video_embed_field
+third_party_settings:
+  field_group:
+    group_apresentacao_listagens:
+      children:
+        - field_image
+        - field_produto_tit_list
+        - field_descritivo
+      label: 'Apresentação / Listagens'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_pagina_de_produto:
+      children:
+        - field_produto_carrossel
+        - title
+        - field_produto_selo
+        - body
+        - field_produto_caracteristicas
+        - field_produto_showcores
+      label: 'Página de Produto'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_conteudo_para_filtros:
+      children:
+        - field_produto_categoria
+        - field_produto_solucoes
+        - field_produto_beneficios_texto
+        - field_produto_beneficios
+        - field_produto_cores
+        - field_produto_tipo
+        - field_produto_preco
+        - field_produto_junta
+        - field_produto_ambiente
+      label: 'Conteúdo para Filtros'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_outras_informacoes_e_midia:
+      children:
+        - field_produto_videos
+        - field_produto_downloads
+        - field_produto_bim
+      label: 'Outras informações e Mídias'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+id: node.produto.default
+targetEntityType: node
+bundle: produto
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 16
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_complemento_produtos:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_descritivo:
+    type: string_textarea
+    weight: 20
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: image_image
+    weight: 18
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_linha:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_produto_ambiente:
+    type: options_select
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_produto_beneficios:
+    type: entity_reference_autocomplete
+    weight: 14
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_produto_beneficios_texto:
+    type: text_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_produto_bim:
+    type: link_default
+    weight: 17
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_produto_caracteristicas:
+    type: text_textarea
+    weight: 17
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_produto_carrossel:
+    type: image_image
+    weight: 13
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_produto_categoria:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_produto_cores:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_produto_downloads:
+    type: file_generic
+    weight: 16
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_produto_junta:
+    type: options_select
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_produto_preco:
+    type: options_select
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_produto_selo:
+    type: image_image
+    weight: 15
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_produto_showcores:
+    type: image_image
+    weight: 18
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_produto_solucoes:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_produto_tipo:
+    type: options_select
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_produto_tit_list:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_produto_videos:
+    type: video_embed_field_textfield
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

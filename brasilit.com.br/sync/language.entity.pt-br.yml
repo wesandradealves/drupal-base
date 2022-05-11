@@ -1,0 +1,9 @@
+uuid: ffebd936-4b95-452e-b6c1-b22a6a615c47
+langcode: pt-br
+status: true
+dependencies: {  }
+id: pt-br
+label: 'Portuguese, Brazil'
+direction: ltr
+weight: 0
+locked: false

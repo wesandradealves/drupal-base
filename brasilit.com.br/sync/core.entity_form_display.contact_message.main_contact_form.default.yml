@@ -1,0 +1,82 @@
+uuid: 3014de71-9ef5-4d19-ad52-717dc220691f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.main_contact_form
+    - field.field.contact_message.main_contact_form.field_e_mail
+    - field.field.contact_message.main_contact_form.field_nome
+    - field.field.contact_message.main_contact_form.field_sobrenome
+id: contact_message.main_contact_form.default
+targetEntityType: contact_message
+bundle: main_contact_form
+mode: default
+content:
+  copy:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_e_mail:
+    type: email_default
+    weight: 5
+    region: content
+    settings:
+      placeholder: E-mail
+      size: 60
+    third_party_settings: {  }
+  field_nome:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: Nome
+    third_party_settings: {  }
+  field_sobrenome:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: Sobrenome
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  mail:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 12
+      placeholder: Mensagem
+    third_party_settings: {  }
+  name:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  preview:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

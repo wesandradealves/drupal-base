@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: pt-br
+uuid: 6315b1da-4c57-46bb-ba74-796708a3d586
+name: Brasilit
+mail: helder.nascimento@actdigital.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/29
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: pt-br

@@ -1,0 +1,33 @@
+uuid: 533fce65-c1f2-4418-affd-9e5d6dcb9ce8
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_produto_preco
+field_name: field_produto_preco
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: $
+    -
+      value: 1
+      label: $$
+    -
+      value: 2
+      label: $$$
+    -
+      value: 3
+      label: $$$$
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

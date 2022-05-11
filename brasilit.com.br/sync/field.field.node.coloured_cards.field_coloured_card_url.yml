@@ -1,0 +1,23 @@
+uuid: 1bd37d8f-e16c-4ead-bc09-8bb949867328
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coloured_card_url
+    - node.type.coloured_cards
+  module:
+    - link
+id: node.coloured_cards.field_coloured_card_url
+field_name: field_coloured_card_url
+entity_type: node
+bundle: coloured_cards
+label: 'Coloured Card URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

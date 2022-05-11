@@ -1,0 +1,21 @@
+uuid: 40e371e5-4304-42b3-9568-808cc654223d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produto_tipo
+    - node.type.produto
+  module:
+    - options
+id: node.produto.field_produto_tipo
+field_name: field_produto_tipo
+entity_type: node
+bundle: produto
+label: Tipo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

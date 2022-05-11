@@ -1,0 +1,23 @@
+uuid: 128f07c1-79b6-401a-b7dc-37d71e791be9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.general_content_two_columns
+    - field.storage.block_content.field_custom_form
+id: block_content.general_content_two_columns.field_custom_form
+field_name: field_custom_form
+entity_type: block_content
+bundle: general_content_two_columns
+label: 'Custom Form'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:contact_form'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

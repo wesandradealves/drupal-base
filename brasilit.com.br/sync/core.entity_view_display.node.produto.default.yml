@@ -1,0 +1,181 @@
+uuid: 99b7f143-0c37-405d-9ecc-21977f79221c
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.produto.body
+    - field.field.node.produto.field_complemento_produtos
+    - field.field.node.produto.field_descritivo
+    - field.field.node.produto.field_image
+    - field.field.node.produto.field_linha
+    - field.field.node.produto.field_produto_ambiente
+    - field.field.node.produto.field_produto_beneficios
+    - field.field.node.produto.field_produto_beneficios_texto
+    - field.field.node.produto.field_produto_bim
+    - field.field.node.produto.field_produto_caracteristicas
+    - field.field.node.produto.field_produto_carrossel
+    - field.field.node.produto.field_produto_categoria
+    - field.field.node.produto.field_produto_cores
+    - field.field.node.produto.field_produto_downloads
+    - field.field.node.produto.field_produto_junta
+    - field.field.node.produto.field_produto_preco
+    - field.field.node.produto.field_produto_selo
+    - field.field.node.produto.field_produto_showcores
+    - field.field.node.produto.field_produto_solucoes
+    - field.field.node.produto.field_produto_tipo
+    - field.field.node.produto.field_produto_tit_list
+    - field.field.node.produto.field_produto_videos
+    - node.type.produto
+  module:
+    - field_group
+    - file
+    - image
+    - link
+    - text
+    - user
+    - video_embed_field
+third_party_settings:
+  field_group:
+    group_imagem_beneficios:
+      children:
+        - field_produto_carrossel
+        - field_produto_beneficios_texto
+      label: Imagem-beneficios
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: Imagem-beneficios
+        show_empty_fields: true
+        id: imagem-beneficios
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_produto_abas_detalhes:
+      children:
+        - field_produto_caracteristicas
+        - field_produto_downloads
+      label: produto-abas-detalhes
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: tabs
+      format_settings:
+        classes: produto-abas-detalhes
+        show_empty_fields: true
+        id: produto-abas-detalhes
+        direction: horizontal
+        width_breakpoint: 640
+id: node.produto.default
+targetEntityType: node
+bundle: produto
+mode: default
+content:
+  field_complemento_produtos:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_produto_beneficios_texto:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_produto_bim:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_produto_caracteristicas:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_produto_carrossel:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_produto_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_produto_downloads:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_produto_selo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_produto_tit_list:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_produto_videos:
+    type: video_embed_field_video
+    label: above
+    settings:
+      autoplay: true
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  body: true
+  field_descritivo: true
+  field_image: true
+  field_linha: true
+  field_produto_ambiente: true
+  field_produto_beneficios: true
+  field_produto_cores: true
+  field_produto_junta: true
+  field_produto_preco: true
+  field_produto_showcores: true
+  field_produto_solucoes: true
+  field_produto_tipo: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

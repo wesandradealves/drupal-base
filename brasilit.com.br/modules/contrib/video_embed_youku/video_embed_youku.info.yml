@@ -1,0 +1,13 @@
+name: Video Embed Field Youku
+type: module
+description: 'A Video Embed Field integration with Youku.'
+package: Video Embed Field
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - video_embed_field:video_embed_field
+
+# Information added by Drupal.org packaging script on 2020-06-16
+version: '8.x-1.0-alpha7'
+project: 'video_embed_youku'
+datestamp: 1592276034

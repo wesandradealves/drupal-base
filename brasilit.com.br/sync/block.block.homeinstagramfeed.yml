@@ -1,0 +1,25 @@
+uuid: 47711abc-550a-4590-8a09-9d55d05b6dae
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:instagram_feed:b08953bd-86e6-41d0-b149-1db6472c63b4'
+  module:
+    - block_content
+  theme:
+    - brasilit2022
+id: homeinstagramfeed
+theme: brasilit2022
+region: home
+weight: -3
+provider: null
+plugin: 'block_content:b08953bd-86e6-41d0-b149-1db6472c63b4'
+settings:
+  id: 'block_content:b08953bd-86e6-41d0-b149-1db6472c63b4'
+  label: 'Home - Instagram Feed'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 11d011da-cdb8-432a-8cdf-5eac2c329574
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Produto - Linha'
+vid: produto_linha
+description: ''
+weight: 0

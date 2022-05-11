@@ -1,0 +1,18 @@
+uuid: c4f114fd-9916-4a3d-a61d-8a832921fdac
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Coloured Cards'
+type: coloured_cards
+description: 'Content type for coloured cards used at the front page'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

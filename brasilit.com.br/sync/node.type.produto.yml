@@ -1,0 +1,17 @@
+uuid: c4e5f2b7-dbe0-450c-af28-a47414123b12
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Produto
+type: produto
+description: 'Para adicionar um produto ao website.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

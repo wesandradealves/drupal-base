@@ -1,0 +1,14 @@
+uuid: 01eb5533-7410-4c0a-bca1-149f5def7d73
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Entre em contato'
+recipients:
+  - helder.nascimento@actdigital.com
+reply: ''
+weight: 0
+message: 'Sua mensagem foi enviada.'
+redirect: ''

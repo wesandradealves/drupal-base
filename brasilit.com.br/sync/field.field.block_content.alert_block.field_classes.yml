@@ -1,0 +1,19 @@
+uuid: e0449488-aeb8-4a36-92e4-e3ddc520b811
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alert_block
+    - field.storage.block_content.field_classes
+id: block_content.alert_block.field_classes
+field_name: field_classes
+entity_type: block_content
+bundle: alert_block
+label: Classes
+description: 'Classes for the alert section'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

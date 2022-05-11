@@ -1,0 +1,33 @@
+{#
+    /**
+     * @file
+     * Theme override to display a view of unformatted rows.
+     *
+     * Available variables:
+     * - title: The title of this group of rows. May be empty.
+     * - rows: A list of the view's row items.
+     *   - attributes: The row's HTML attributes.
+     *   - content: The row's content.
+     * - view: The view object.
+     * - default_row_class: A flag indicating whether default classes should be
+     *   used on rows.
+     *
+     * @see template_preprocess_views_view_unformatted()
+     */
+    #}
+    {% for row in rows %}
+      {%
+        set row_classes = [
+          'overflow-hidden',
+          'hovered-cards-item',
+          default_row_class ? 'views-row',
+        ]
+      %}
+      <li{{ row.attributes.addClass(row_classes) }} onclick="window.location = '{{row.content['#row']._entity.field_coloured_card_url[0].value.uri}}'">
+          <span style="background-color: {{row.content['#row']._entity.field_coloured_card_background[0].value}}" class="d-flex flex-column justify-content-between hovered-cards-item--inner col-12">
+              <h3 class="p-3 pb-2 hovered-cards-item--inner-title">{{row.content['#row']._entity.title[0].value}}</h3>
+              <span class="d-block flex-grow-1 hovered-cards-item--inner-thumbnail" style="background-image: url({{ file_url(row.content['#row']._entity.field_coloured_card_image.entity.uri.value) }})"></span>
+          </span>
+      </li>
+    {% endfor %}
+    

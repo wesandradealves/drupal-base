@@ -1,0 +1,22 @@
+uuid: 7b9b2b84-bc6b-4403-8479-8362c1de547f
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - brasilit2022
+_core:
+  default_config_hash: kigu8pTxXt1qGR2NJ5HHdC4G2G1wsDrIjLPKBT5wUBc
+id: brasilit2022_content
+theme: brasilit2022
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Conteúdo da página principal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,11 @@
+uuid: b23a62d6-454d-42eb-a489-a10fe90194b7
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.produto_beneficios
+id: taxonomy_term.produto_beneficios
+target_entity_type_id: taxonomy_term
+target_bundle: produto_beneficios
+default_langcode: site_default
+language_alterable: true

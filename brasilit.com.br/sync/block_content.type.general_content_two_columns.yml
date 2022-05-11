@@ -1,0 +1,8 @@
+uuid: e40f85e8-18eb-4619-adce-b5f007c73e5c
+langcode: en
+status: true
+dependencies: {  }
+id: general_content_two_columns
+label: 'General Content Two Columns'
+revision: 0
+description: 'Block used for two columns content section '

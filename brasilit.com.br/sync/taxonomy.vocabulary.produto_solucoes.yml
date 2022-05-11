@@ -1,0 +1,8 @@
+uuid: 602ab042-badf-4575-8eeb-5e15c7533678
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Produto - Soluções'
+vid: produto_solucoes
+description: ''
+weight: 0

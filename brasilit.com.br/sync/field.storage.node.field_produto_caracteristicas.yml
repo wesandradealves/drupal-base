@@ -1,0 +1,19 @@
+uuid: b37596ff-5216-4a82-8265-0592e8c22636
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_produto_caracteristicas
+field_name: field_produto_caracteristicas
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: 138e7623-419a-4138-a8ed-6f53705b3e47
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.produto
+id: node.produto.promote
+field_name: promote
+entity_type: node
+bundle: produto
+label: 'Promovido para a página inicial'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desligado
+field_type: boolean

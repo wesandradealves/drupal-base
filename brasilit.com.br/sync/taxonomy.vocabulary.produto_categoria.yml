@@ -1,0 +1,8 @@
+uuid: b179cdad-034e-4038-8628-40c08b3bbce0
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Produto - Categoria'
+vid: produto_categoria
+description: ''
+weight: 0

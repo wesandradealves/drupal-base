@@ -1,0 +1,27 @@
+uuid: 175fce67-aeb5-4bd6-a25d-dd3de1c38eee
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_produto_junta
+field_name: field_produto_junta
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: aparente
+      label: Aparente
+    -
+      value: invisivel
+      label: Invisível
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+uuid: ded9324c-7f9b-4a58-b0d7-6e25247819c1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_complemento_produtos
+    - node.type.produto
+id: node.produto.field_complemento_produtos
+field_name: field_complemento_produtos
+entity_type: node
+bundle: produto
+label: 'Relacionado com'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      produto: produto
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

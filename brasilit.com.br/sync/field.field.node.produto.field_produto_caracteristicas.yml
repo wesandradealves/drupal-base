@@ -1,0 +1,21 @@
+uuid: 8872a0fd-a25e-4e9d-9c27-8989ac136627
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produto_caracteristicas
+    - node.type.produto
+  module:
+    - text
+id: node.produto.field_produto_caracteristicas
+field_name: field_produto_caracteristicas
+entity_type: node
+bundle: produto
+label: Características
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

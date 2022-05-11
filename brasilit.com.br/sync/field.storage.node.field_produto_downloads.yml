@@ -1,0 +1,23 @@
+uuid: 5940a7c3-db46-4a9b-95b8-ad174e3ca040
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_produto_downloads
+field_name: field_produto_downloads
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

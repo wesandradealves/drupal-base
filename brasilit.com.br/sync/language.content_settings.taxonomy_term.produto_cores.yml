@@ -1,0 +1,11 @@
+uuid: 9454b7bc-87dc-4ba9-baf6-c01096b8c2ea
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.produto_cores
+id: taxonomy_term.produto_cores
+target_entity_type_id: taxonomy_term
+target_bundle: produto_cores
+default_langcode: site_default
+language_alterable: true

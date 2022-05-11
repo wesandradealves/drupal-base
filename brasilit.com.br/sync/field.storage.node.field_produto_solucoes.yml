@@ -1,0 +1,20 @@
+uuid: 53235f43-a31f-46bc-ba53-16290ac09cf0
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_produto_solucoes
+field_name: field_produto_solucoes
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

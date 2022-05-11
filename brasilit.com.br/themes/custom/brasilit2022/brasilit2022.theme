@@ -1,0 +1,207 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File; 
+use Drupal\core\Url; 
+use \Drupal\block\Entity\Block;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ *
+ * Example on how to alter theme settings form
+ */
+function brasilit2022_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+  $form['secondary_logo'] = array( 
+
+      '#type' => 'managed_file', 
+
+      '#title' => t('Secondary Logo'), 
+
+      '#required' => FALSE, 
+
+      '#upload_location' => 'public://', 
+
+      '#default_value' => theme_get_setting('secondary_logo'),  
+
+      '#upload_validators' => array( 
+
+        'file_validate_extensions' => array('gif png jpg jpeg'), 
+
+      ), 
+
+  );  
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function brasilit2022_preprocess_html(&$variables)
+{
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node) {
+      $variables['node_id'] = $node->id();
+  }  
+}
+
+function brasilit2022_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function brasilit2022_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Add content type suggestions.
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    array_splice($suggestions, 1, 0, 'page__node__' . $node->getType());
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function brasilit2022_preprocess_block(&$variables) {
+  global $base_url; 
+
+  $site_config = \Drupal::config('system.site');
+
+  $variables['base_path'] = base_path();
+  $variables['site_name'] = $site_config->get('name');
+  $variables['site_slogan'] = $site_config->get('slogan');
+  $variables['logo'] =  theme_get_setting('logo')['url'];  
+
+  $fid = theme_get_setting('secondary_logo'); 
+  if($fid){ 
+    $file = File::load($fid[0]); 
+    if($file) {
+      $variables['secondarylogo_url'] = $file->createFileUrl(); 
+    }
+  }  
+
+  $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
+}
+
+function brasilit2022_preprocess_form(&$vars) {
+  if ($vars['attributes']['id'] == 'search-block-form') {
+    $vars['attributes']['class'][] = 'd-flex align-items-stretch justify-content-end col-12 ps-lg-3 rounded-1 overflow-hidden inline-form';
+  }
+}
+
+/**
+* hook_form_FORM_ID_alter
+*/
+function brasilit2022_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+    #$form['search_block_form']['#title'] = t('Search'); // Change the text on the label element
+    #$form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
+    #$form['search_block_form']['#size'] = 40;  // define size of the textfield
+    #$form['search_block_form']['#default_value'] = t('Search'); // Set a default value for the textfield
+    $form['actions']['submit']['#value'] = t('Procurar'); // Change the text on the submit button
+    #$form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() . path_to_theme() . '/images/search-button.png');
+
+    // Add extra attributes to the text box
+    #$form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search';}";
+    #$form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search') {this.value = '';}";
+    // Prevent user from searching the default text
+    #$form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
+
+    // Alternative (HTML5) placeholder attribute instead of using the javascript
+    $form['search_block_form']['#attributes']['placeholder'] = t('Pesquisar');
+}
+
+function brasilit2022_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  if (isset($variables['attributes']['block'])) {
+    $hook = str_replace(array('block-', '-'), array('', '_'), $variables['attributes']['block']);
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
+  }
+} 
+
+function brasilit2022_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (in_array($form_id, ['contact_message_main_contact_form_form'])) {
+    $form['#attributes'] = array('class' => 'contact-form');
+    $form['subject']['#access'] = FALSE;
+    $form['copy']['#access'] = FALSE;
+    $form['actions']['preview']['#access'] = FALSE;
+    $form['field_nome']['widget'][0]['value']['#title_display'] = 'invisible';
+    $form['field_sobrenome']['widget'][0]['value']['#title_display'] = 'invisible';
+    $form['field_e_mail']['widget'][0]['value']['#title_display'] = 'invisible';
+    $form['message']['widget'][0]['value']['#title_display'] = 'invisible';
+    $form['name']['#access'] = FALSE;
+    $form['mail']['#access'] = FALSE;
+    $form['actions']['submit']['#value'] = 'Enviar';
+  }
+}
+
+
+function wedlock_preprocess_views_view_unformatted(&$variables) {
+
+  $view = $variables['view'];
+  $id = $view->storage->id();
+
+  // Check to view ID in which template we want to create the variable
+  if ($id == 'gallery' && $view->current_display == 'block_1') {
+    // Should be injected.
+    $termStorage = \Drupal::entityManager()->getStorage('taxonomy_term');
+    // "produto_categoria" is the name of taxonomy in below example
+
+    //uncomment below line if want to get full entity of terms
+    //$variables['produtos_terms'] = $termStorage->loadTree('produto_categoria', 0, NULL, TRUE);
+
+    // Load all flavors taxonomy term.
+    $terms = $termStorage->loadTree('produto_categoria', 0, NULL, TRUE);
+    foreach ($terms as $term) {
+      $term_data[] = array(
+      'id' => $term->tid,
+      'name' => $term->name
+      );
+    }
+    $variables['produtos_terms'] = $term_data;
+  }
+}
+
+/**
+ * @param $variables
+ */
+function  brasilit2022_preprocess_field(&$variables)
+{
+  if ($variables['element']['#field_name'] == 'field_produto_carrossel') {
+    foreach (array_keys($variables['items']) as $index) {
+      $variables['items'][$index]['content']['#item_attributes']['class'][] = 'carrossel-image';
+    }
+  }
+
+  if ($variables['element']['#field_name'] == 'field_produto_beneficios_texto') {
+    foreach (array_keys($variables['items']) as $index) {
+      $variables['items'][$index]['content']['#item_attributes']['class'][] = 'produtos-beneficio-texto';
+    }
+  }
+
+
+  
+
+  
+}

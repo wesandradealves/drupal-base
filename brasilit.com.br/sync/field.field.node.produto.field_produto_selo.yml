@@ -1,0 +1,38 @@
+uuid: 8d5c3ec0-77e0-4c63-9cb0-4a5b2ed091d1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produto_selo
+    - node.type.produto
+  module:
+    - image
+id: node.produto.field_produto_selo
+field_name: field_produto_selo
+entity_type: node
+bundle: produto
+label: Selo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'produto/[nid]/selos'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: 2MB
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

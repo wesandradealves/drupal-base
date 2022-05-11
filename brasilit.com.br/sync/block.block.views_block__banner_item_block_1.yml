@@ -1,0 +1,24 @@
+uuid: 9769c3d9-58a7-49c1-ae62-9638a3ad2bfb
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - views.view.banner_item
+  module:
+    - views
+  theme:
+    - brasilit2022
+id: views_block__banner_item_block_1
+theme: brasilit2022
+region: home
+weight: -5
+provider: null
+plugin: 'views_block:banner_item-block_1'
+settings:
+  id: 'views_block:banner_item-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

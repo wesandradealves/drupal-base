@@ -1,0 +1,58 @@
+{#
+    /**
+     * @file
+     * Theme override to display a view of unformatted rows.
+     *
+     * Available variables:
+     * - title: The title of this group of rows. May be empty.
+     * - rows: A list of the view's row items.
+     *   - attributes: The row's HTML attributes.
+     *   - content: The row's content.
+     * - view: The view object.
+     * - default_row_class: A flag indicating whether default classes should be
+     *   used on rows.
+     *
+     * @see template_preprocess_views_view_unformatted()
+     */
+    #}
+    {% for row in rows %}
+      {%
+        set row_classes = [
+          default_row_class ? 'views-row',
+        ]
+      %}
+      <div{{ row.attributes.addClass(row_classes) }}> 
+          <div class="container d-flex align-items-center flex-column flex-md-row ps-3 pe-3 ps-md-0 pe-md-0 pe-md-0 pt-5 pb-5">
+              <div class="banner-item--content col-12 col-md-6">
+                <h2 class="banner-item--content--title">{{row.content['#row']._entity.title[0].value}}</h2>
+                <p class="banner-item-content--text col-10 col-md-12 mt-4">{{row.content['#row']._entity.field_banner_te[0].value}}</p>
+                
+                {% if row.content['#row']._entity.field_banner_link[0] %}
+                <a href="{{row.content['#row']._entity.field_banner_link[0].value.uri}}" class="rounded-0 mt-4 btn --default" title="{{row.content['#row']._entity.field_banner_link[0].value.title}}">{{row.content['#row']._entity.field_banner_link[0].value.title}}</a>
+                {% endif %}
+              </div>
+    
+              {% if file_url(row.content['#row']._entity.field_banner_image.entity.uri.value) or file_url(row.content['#row']._entity.field_banner_mobile_image.entity.uri.value) %}
+              <div class="banner-item--content-thumbnail d-flex col-12 col-md-6 mt-5 mt-md-0">
+                <picture class="d-block col-12">
+                    <source media="(min-width:768px)" srcset="{{ file_url(row.content['#row']._entity.field_banner_image.entity.uri.value) }}">
+                    {% if file_url(row.content['#row']._entity.field_banner_mobile_image.entity.uri.value) %}
+                    <img class="d-block ms-auto" src="{{ file_url(row.content['#row']._entity.field_banner_mobile_image.entity.uri.value) }}">
+                    {% endif %}
+                </picture>                 
+              </div>
+              {% endif %}
+    
+
+              {% if file_url(row.content['#row']._entity.field_banner_image.entity.uri.value) %}
+                <picture class="d-block banner-item--background">
+                  {% if file_url(row.content['#row']._entity.field_background_desktop_image.entity.uri.value) %}
+                    <source media="(min-width:768px)" srcset="{{file_url(row.content['#row']._entity.field_background_desktop_image.entity.uri.value)}}">
+                  {% endif %}
+                  <img src="{{ base_path ~ directory }}/css/assets/imgs/banner-mask--mobile.png">
+                </picture> 
+              {% endif %}
+          </div>
+        </div>
+    {% endfor %}
+    

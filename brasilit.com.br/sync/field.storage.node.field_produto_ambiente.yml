@@ -1,0 +1,27 @@
+uuid: 0e3dfc43-f009-4d95-a5eb-6b92f14540a0
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_produto_ambiente
+field_name: field_produto_ambiente
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: interno
+      label: Interno
+    -
+      value: externo
+      label: Externo
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 660e1eb6-9d9f-42ed-aeb8-928e31238287
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_produto_cores
+field_name: field_produto_cores
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

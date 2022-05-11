@@ -1,0 +1,8 @@
+uuid: 98b30e18-43f9-4b38-9e1a-25a3cfc685bd
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Produto - Benefícios'
+vid: produto_beneficios
+description: ''
+weight: 0

@@ -1,0 +1,41 @@
+uuid: 8088c162-43c1-4330-b976-c157aa1df9c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.instagram_feed
+    - field.field.block_content.instagram_feed.field_instagram_access_token
+    - field.field.block_content.instagram_feed.field_instagram_content
+    - field.field.block_content.instagram_feed.field_instagram_profile
+  module:
+    - text
+id: block_content.instagram_feed.default
+targetEntityType: block_content
+bundle: instagram_feed
+mode: default
+content:
+  field_instagram_access_token:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_instagram_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_instagram_profile:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

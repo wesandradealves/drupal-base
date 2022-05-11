@@ -1,0 +1,25 @@
+uuid: d22d2a2c-d129-4466-8dab-0809ecb24668
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_info:95cd972b-9761-4698-93ae-c4023efbb2c5'
+  module:
+    - block_content
+  theme:
+    - brasilit2022
+id: footerblockcontato
+theme: brasilit2022
+region: footer_right
+weight: -8
+provider: null
+plugin: 'block_content:95cd972b-9761-4698-93ae-c4023efbb2c5'
+settings:
+  id: 'block_content:95cd972b-9761-4698-93ae-c4023efbb2c5'
+  label: 'Footer Block  - Contato'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

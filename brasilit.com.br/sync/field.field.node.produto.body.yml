@@ -1,0 +1,23 @@
+uuid: 32cd4a73-7d12-4a10-8352-c7bc9d91249b
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.produto
+  module:
+    - text
+id: node.produto.body
+field_name: body
+entity_type: node
+bundle: produto
+label: Descritivo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

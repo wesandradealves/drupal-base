@@ -1,0 +1,19 @@
+uuid: cdf9c5c5-466d-448c-b2ba-965bdcaa7e80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_icon_classes
+    - system.menu.social
+id: menu_link_content.social.field_icon_classes
+field_name: field_icon_classes
+entity_type: menu_link_content
+bundle: social
+label: 'Icon Classes'
+description: 'Icon classes for the selected social network'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
